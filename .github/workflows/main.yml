@@ -16,6 +16,8 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
     - name: Build the Docker image
+      uses: actions/docker/cli@master
       run: docker build . --file Dockerfile --tag jiangfengbing/sql-advisor:latest
     - name: Push the Docker image
+      uses: actions/docker/cli@master
       run: docker push jiangfengbing/sql-advisor:latest
