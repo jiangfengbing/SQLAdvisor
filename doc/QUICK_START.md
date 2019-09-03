@@ -8,7 +8,7 @@ git clone https://github.com/jiangfengbing/SQLAdvisor.git
 #### 1.2 安装依赖项
 
 ```
-sudo apt install cmake libaio-dev libffi-dev libglib2.0-dev libglib2.0-dev-bin
+sudo apt install cmake libaio-dev libffi-dev libglib2.0-dev libglib2.0-bin
 
 wget https://www.percona.com/downloads/Percona-Server-5.6/Percona-Server-5.6.45-86.1/binary/debian/stretch/x86_64/percona-server-common-5.6_5.6.45-86.1-1.stretch_amd64.deb
 wget https://www.percona.com/downloads/Percona-Server-5.6/Percona-Server-5.6.45-86.1/binary/debian/stretch/x86_64/libperconaserverclient18.1_5.6.45-86.1-1.stretch_amd64.deb
@@ -18,6 +18,14 @@ sudo dpkg -i percona-server-common-5.6_5.6.45-86.1-1.stretch_amd64.deb
 sudo dpkg -i libperconaserverclient18.1_5.6.45-86.1-1.stretch_amd64.deb
 sudo dpkg -i libperconaserverclient18.1-dev_5.6.45-86.1-1.stretch_amd64.deb
 sudo apt --fix-broken install
+```
+
+如果是ubuntu，将`libglib2.0-bin`替换为`libglib2.0-dev-bin`，Percona-Server的URL替换为:
+
+```
+https://www.percona.com/downloads/Percona-Server-5.6/Percona-Server-5.6.45-86.1/binary/debian/bionic/x86_64/libperconaserverclient18.1-dev_5.6.45-86.1-1.bionic_amd64.deb
+https://www.percona.com/downloads/Percona-Server-5.6/Percona-Server-5.6.45-86.1/binary/debian/bionic/x86_64/percona-server-common-5.6_5.6.45-86.1-1.bionic_amd64.deb
+https://www.percona.com/downloads/Percona-Server-5.6/Percona-Server-5.6.45-86.1/binary/debian/bionic/x86_64/libperconaserverclient18.1_5.6.45-86.1-1.bionic_amd64.deb
 ```
 
 #### 1.3 编译依赖项sqlparser
